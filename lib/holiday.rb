@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
     
     data.each do |holiday, supplies|
       supplies = supplies.join(", ")
-      holiday = holiday.to_s.split("-").collect {|name| name.capitalize}.join(" ")
+      holiday = holiday.to_s.split(" ").collect {|name| name.capitalize}.join(" ")
     
       puts "  #{holiday}: #{supplies}"
     end
