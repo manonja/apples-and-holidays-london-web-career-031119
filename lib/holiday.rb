@@ -82,12 +82,13 @@ def all_holidays_with_bbq(holiday_hash)
   
   holiday_name.each do |season, data|
     data.each do |holidays, supplies|
-      supplies.select do |item|
+      supplies.each do |item|
         if item == "BBQ"
-        
-  
-      
-
+          holiday_name << holidays
+        end
+      end
+    end
+  end
 end
 
 
