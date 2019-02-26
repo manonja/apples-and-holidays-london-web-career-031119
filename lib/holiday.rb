@@ -84,7 +84,7 @@ def all_holidays_with_bbq(holiday_hash)
     data.each do |holidays, supplies|
       supplies.each do |item|
         if item == "BBQ"
-          holiday_name << holidays
+          holiday_name.push(holidays)
         end
       end
     end
